@@ -109,12 +109,12 @@ struct ContentView: View {
                                 Image(systemName: "arrow.down.to.line.compact")
                                     .bold()
                                 Text("Deposit")
-                                    .font(.system(size: geometry.size.width * 0.05, weight: .bold))
+                                    .font(.system(size: geometry.size.width * 0.04, weight: .bold))
                             }
                             .padding()
                             .foregroundColor(.black)
                             .overlay(
-                                RoundedRectangle(cornerRadius: geometry.size.width * 0.05)
+                                RoundedRectangle(cornerRadius: geometry.size.width * 0.04)
                                     .stroke(Color.black, lineWidth: 2)
                             )
                             .padding(.leading)
@@ -129,16 +129,16 @@ struct ContentView: View {
                                 Image(systemName: "arrow.up.to.line.compact")
                                     .bold()
                                 Text("Withdraw")
-                                    .font(.system(size: geometry.size.width * 0.05, weight: .bold))
+                                    .font(.system(size: geometry.size.width * 0.04, weight: .bold))
                             }
                             .foregroundColor(.white)
                             .padding()
                             .background(.black)
-                            .cornerRadius(geometry.size.width * 0.05)
+                            .cornerRadius(geometry.size.width * 0.04)
                             .padding(.trailing)
                         }
                     }
-                    .padding()
+                    .padding(.horizontal)
                     
                     HStack {
                         Text("My Assets")
@@ -158,7 +158,7 @@ struct ContentView: View {
                                 }
                             }
                     }
-                    .padding()
+                    .padding(.horizontal)
                     
                     if isTextFieldVisible {
                         TextField("Search", text: $searchText)
@@ -166,7 +166,8 @@ struct ContentView: View {
                             .onTapGesture {
                                 // Handle tap on the TextField if needed
                             }
-                            .padding(.horizontal)
+                            .frame(width: geometry.size.width * 0.85)
+                            .font(.system(size: 24))
                     }
                     
                     GridView(items: sampleItems)
