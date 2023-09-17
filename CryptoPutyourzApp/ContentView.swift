@@ -15,6 +15,12 @@ struct ContentView: View {
     @State private var searchText = ""
     
     let moneys = ["USD", "IDR"]
+    let sampleItems = [
+        Item(name: "BTC", balance: 4.485, balanceReal: 97305),
+        Item(name: "ETH", balance: 11.20, balanceReal: 34253),
+        Item(name: "XRP", balance: 11.20, balanceReal: 11864),
+        Item(name: "LTC", balance: 319.45, balanceReal: 19485)
+    ]
     
     var body: some View {
         NavigationView {
@@ -162,6 +168,8 @@ struct ContentView: View {
                             }
                             .padding(.horizontal)
                     }
+                    
+                    GridView(items: sampleItems)
                     Spacer()
                 }
             }

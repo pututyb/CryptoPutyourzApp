@@ -18,6 +18,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(item: Item(name: "Item 1"))
+        DetailView(item: Item(name: "BTC", balance: 10.2, balanceReal: 10495))
     }
 }

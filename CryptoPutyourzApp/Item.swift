@@ -10,13 +10,13 @@ import Foundation
 struct Item: Identifiable {
     let id = UUID()
     let name: String
+    let balance: Double
+    let balanceReal : Int
 }
 
 let items = [
-    Item(name: "Item 1"),
-    Item(name: "Item 2"),
-    Item(name: "Item 3"),
-    Item(name: "Item 4"),
-    Item(name: "Item 5"),
-    Item(name: "Item 6")
+    Item(name: "BTC", balance: 4.485, balanceReal: 97305),
+    Item(name: "ETH", balance: 11.20, balanceReal: 34253),
+    Item(name: "XRP", balance: 22934, balanceReal: 11864),
+    Item(name: "LTC", balance: 319.45, balanceReal: 19485)
 ]
